@@ -1,0 +1,7 @@
+{
+  "name": "RZAApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
