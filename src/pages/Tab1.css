@@ -1,3 +1,19 @@
 ion-content ion-toolbar {
   --background: translucent;
+<<<<<<< Updated upstream
+=======
+}
+
+.header{
+	text-align: center;
+}
+
+.slider{
+	margin: 5px;
+	padding: 0;
+}
+
+.img{
+	border-radius: 20px;
+>>>>>>> Stashed changes
 }
