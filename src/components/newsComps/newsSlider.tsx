@@ -1,5 +1,5 @@
 import React from "react";
-import {IonSlide, IonSlides, IonContent, IonHeader, IonTitle} from '@ionic/react';
+import {IonSlide, IonSlides, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/react';
 import newsList from "./newsList";
 
 const slideOpts = {
@@ -20,7 +20,9 @@ const NewsSlider= () => {
 	return (
     <IonContent>
       <IonHeader  className="header">
-        <IonTitle>Новости</IonTitle>
+        <IonToolbar>
+          <IonTitle>Новости</IonTitle>
+        </IonToolbar>
       </IonHeader>
       <IonSlides pager={true} options={slideOpts} className="slider">
 			{newsList.map((src, index) => (<IonSlide className="slideNew">

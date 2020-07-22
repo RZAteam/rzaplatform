@@ -1,7 +1,5 @@
 ion-content ion-toolbar {
   --background: translucent;
-<<<<<<< Updated upstream
-=======
 }
 
 .header{
@@ -15,5 +13,4 @@ ion-content ion-toolbar {
 
 .img{
 	border-radius: 20px;
->>>>>>> Stashed changes
 }
