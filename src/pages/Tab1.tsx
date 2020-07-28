@@ -3,6 +3,8 @@ import {IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab1.css';
 import NewsSlider from "../components/newsComps/newsSlider";
 
+
+
 const Tab1: React.FC = () => {
   return (
     <IonPage>
@@ -11,7 +13,7 @@ const Tab1: React.FC = () => {
           <IonTitle>Tab 1</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <NewsSlider/>
+      {<NewsSlider width={document.documentElement.clientWidth}/>}
     </IonPage>
   );
 };
