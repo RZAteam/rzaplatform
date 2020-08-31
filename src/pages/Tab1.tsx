@@ -3,13 +3,14 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import ExploreContainer from '../components/ExploreContainer';
 // import TextComponent from '../components/TextComponent'
 import './Tab1.css';
+import deptOrderPictures from '../components/deptOrderPictures/deptOrderPictures';
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Новости</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -18,7 +19,7 @@ const Tab1: React.FC = () => {
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <deptOrderPictures />
         {/*<TextComponent name = "Stranger" />*/}
       </IonContent>
     </IonPage>
