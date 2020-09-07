@@ -1,3 +1,13 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+.ion-col {
+  font-family: 'Play', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.heading {
+  font-family: 'Play', sans-serif;
+  display: flex;
+  justify-content: center;
+}
