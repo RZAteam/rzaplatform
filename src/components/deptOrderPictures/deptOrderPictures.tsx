@@ -23,7 +23,7 @@ export const DeptOrderPictures: React.FC = () => {
     }, []);
 
     function getSourceList() {
-        fetch("http://127.0.0.1:5000/prikazy",)
+        fetch("http://192.168.1.197:5000/prikazy",)
             .then(res => res.json())
             .then(
                 (res) => {
@@ -42,7 +42,7 @@ export const DeptOrderPictures: React.FC = () => {
         <IonSlides pager={true} options={slideOpts}>
             {OrdersList.map((item, index) => (
                 <IonSlide key = {item+index}>
-                        <IonImg  src={item} key = {index} />
+                        <IonImg  src={JSON.parse(JSON.stringify(item)).src} key = {index} />
                 </IonSlide>))}
         </IonSlides>
         {/*<IonButton>Обновить</IonButton>*/}
