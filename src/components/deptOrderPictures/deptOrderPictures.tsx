@@ -1,6 +1,5 @@
-import React from 'react';
-import {IonSlides, IonSlide, IonContent, IonImg, IonCard, IonItem} from '@ionic/react';
-import ExploreContainer from "../ExploreContainer";
+import React, {useEffect,useState} from 'react';
+import {IonSlides, IonSlide, IonContent, IonImg, IonCard, IonItem, IonText, IonButton} from '@ionic/react';
 import "./deptOrderPictures.css"
 
 
@@ -16,25 +15,38 @@ const slideOpts = {
     },
 };
 
-const OrdersList = [
-    "/assets/123.jpg",
-    "/assets/321.jpg"
-]
 
 export const DeptOrderPictures: React.FC = () => {
+    const [OrdersList,setSrcs] = useState([]);
+    useEffect(() => {
+        getSourceList();
+    }, []);
+
+    function getSourceList() {
+        fetch("http://127.0.0.1:5000/prikazy",)
+            .then(res => res.json())
+            .then(
+                (res) => {
+                    setSrcs(res._items);
+                    // console.log(res._items);
+                },
+                (error) => {
+                    console.log(error);
+                }
+            )
+        return 1;
+    }
+
     return (
+    <IonContent>
         <IonSlides pager={true} options={slideOpts}>
-            {/*<IonSlide key ={1}>*/}
-            {/*    <IonImg  src="/assets/123.jpg"/>*/}
-            {/*</IonSlide>*/}
-            {/*<IonSlide key ={1}>*/}
-            {/*    <IonImg  src="/assets/321.jpg"/>*/}
-            {/*</IonSlide>*/}
             {OrdersList.map((item, index) => (
-                <IonSlide key = {item.toString()+index}>
+                <IonSlide key = {item+index}>
                         <IonImg  src={item} key = {index} />
                 </IonSlide>))}
         </IonSlides>
-    );
+        {/*<IonButton>Обновить</IonButton>*/}
+    </IonContent>
+    )
 }
 export default DeptOrderPictures;

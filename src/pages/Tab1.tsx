@@ -11,10 +11,9 @@ import {
     IonLabel,
     IonItem
 } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-// import TextComponent from '../components/TextComponent'
 import './Tab1.css';
 import DeptOrderPictures from '../components/deptOrderPictures/deptOrderPictures';
+import Clock from '../components/Clock';
 
 const Tab1: React.FC = () => {
     return (
@@ -27,8 +26,8 @@ const Tab1: React.FC = () => {
             <IonContent>
                 <IonGrid>
                     <IonRow>
-                        <IonCol className = "ion-col"><IonItem ><IonLabel>Блок новостей</IonLabel></IonItem></IonCol>
-                        <IonCol className = "ion-col"><IonItem ><IonLabel>Блок времени</IonLabel></IonItem></IonCol>
+                        {/*<IonCol className = "ion-col"><IonItem ><IonLabel>Блок новостей</IonLabel></IonItem></IonCol>*/}
+                        <IonCol className = "ion-col"><IonItem ><Clock/></IonItem></IonCol>
                     </IonRow>
                     <IonRow className = "ion-col">
                         <IonItem >
